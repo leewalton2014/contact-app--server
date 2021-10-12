@@ -6,6 +6,9 @@ const app = express();
 //connect to MongoDB
 connectDB();
 
+//Init middelware functions
+app.use(express.json({ extended: false }));
+
 app.get("/", (req, res) => res.send({ msg: "WELCOME TO THE API" }));
 
 //Define routes
