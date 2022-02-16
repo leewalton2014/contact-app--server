@@ -13,7 +13,7 @@ const Login = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        console.log("login submit");
+        console.log(user);
     };
 
     return (
