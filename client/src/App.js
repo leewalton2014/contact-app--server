@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
+import Register from "./components/auth/Register";
+import Login from "./components/auth/Login";
+
 //context
 import ContactState from "./context/contact/ContactState";
 import AuthState from "./context/auth/AuthState";
@@ -21,6 +24,11 @@ const App = () => {
                             <Routes>
                                 <Route path="/" element={<Home />} />
                                 <Route path="/about" element={<About />} />
+                                <Route
+                                    path="/register"
+                                    element={<Register />}
+                                />
+                                <Route path="/login" element={<Login />} />
                             </Routes>
                         </div>
                     </Fragment>
