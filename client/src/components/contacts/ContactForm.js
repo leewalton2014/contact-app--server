@@ -32,9 +32,9 @@ const ContactForm = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        if(current=== null){
+        if (current === null) {
             addContact(contact);
-        }else{
+        } else {
             updateContact(contact);
         }
         clearAll();
@@ -42,7 +42,7 @@ const ContactForm = () => {
 
     const clearAll = () => {
         clearCurrent();
-    }
+    };
 
     return (
         <form onSubmit={onSubmit}>
