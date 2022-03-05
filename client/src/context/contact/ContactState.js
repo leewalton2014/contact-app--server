@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 import contactContext from "./contactContext";
 import contactReducer from "./contactReducer";
 import {
@@ -66,6 +66,7 @@ const ContactState = (props) => {
     //Delete contact
     const deleteContact = async (id) => {
         try {
+            // eslint-disable-next-line
             const res = await axios.delete(`/api/contacts/${id}`);
             dispatch({ type: DELETE_CONTACT, payload: id });
         } catch (err) {
